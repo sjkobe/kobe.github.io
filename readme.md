@@ -11,3 +11,8 @@ https://sjkobe.github.io/kobe.github.io/html+css/week4/Card纯css.html</br>
 https://sjkobe.github.io/kobe.github.io/html+css/js/on.html</br>
 svg</br>
 https://sjkobe.github.io/kobe.github.io/html+css/js/tu.html
+种地
+https://sjkobe.github.io/kobe.github.io/html+css/cwc/index.html
+https://sjkobe.github.io/kobe.github.io/html+css/cwc/Contact Us.html
+炉石
+https://sjkobe.github.io/kobe.github.io/html+css/lushi/改index.html
