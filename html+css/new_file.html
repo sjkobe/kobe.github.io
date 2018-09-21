@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<div class="jump"></div>
+	</body>
+	<style type="text/css">
+		.jump{
+			
+			width: 180px;
+			height: 300px;
+			background: url(img/004031q6mrp666ax4wrofx.png);
+			
+			animation: jump;
+			animation-duration: .8s;
+			animation-timing-function: steps(7,start);
+			animation-iteration-count: infinite;
+		}
+		@keyframes jump{
+			0% {background-position-x: 180px;}
+			100% {background-position-x: 100%;}
+		}
+	</style>
+	<script src="https://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js" ></script>
+</html>

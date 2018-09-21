@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="">kobe bryant</a>
+	</body>
+	<style type="text/css">
+		a{
+			display: block;
+			width: 200px;
+			line-height: 100px;
+			background: wheat;
+			text-align: center;
+			text-decoration: none;
+			color: white;
+			position: relative;
+			z-index: 1;
+			transition: all .5s;
+			vertical-align: middle;
+			overflow: hidden;
+			margin: 50px auto;
+			}
+			a:before{
+				content: '';
+				display: block;
+				width: 0%;
+				height: 10px;
+				background: pink;
+				transition: all .5s;
+				position: absolute;
+			/*	border-radius: 50%;*/
+				/*top: 0;
+				left: 0;*/
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+				/*transform: rotateX(90deg);*/
+				/*transform-origin: 100% 0% ;*/
+				opacity: 0;
+			
+				
+			}
+			a:hover:before{
+				width: 100%;
+				transform: rotateX(0deg);
+				opacity: 1;
+				}
+				
+				a:hover{	
+				color: deeppink;	
+			
+			}
+	</style>
+</html>

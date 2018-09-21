@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="big">
+		<div class="lifangti">
+			<div class="one"></div>
+			<div class="two"></div>
+			<div class="there"></div>
+			<div class="four"></div>
+			<div class="five"></div>
+			<div class="six"></div>
+		</div>	
+		<div class="biglifangti">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+			<div class="d"></div>
+			<div class="e"></div>
+			<div class="f"></div>
+		</div>
+		</div>
+		<style type="text/css">
+			body{
+				background: black ;
+				
+			}
+			.lifangti{
+				width: 200px;
+				height: 200px;
+				/*background: gray;*/
+				margin: 300px auto;
+				position: relative;
+				transform: rotateX(-45deg) rotateY(-135deg);
+				transform-style: preserve-3d;
+				animation: lifangti;
+			    animation-duration: 10s;	
+			    animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+			   
+			}
+			.biglifangti{
+				width: 400px;
+				height: 400px;
+				/*background: black;*/
+				margin: 300px auto;
+				position: relative;
+				transform: rotateX(-45deg) rotateY(-135deg);
+				transform-style: preserve-3d;
+				animation: lifangti;
+			    animation-duration: 30s;	
+			    animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+			    top: -600px;
+			   
+			}
+			@keyframes lifangti{
+				0%{transform: rotateY(45deg) rotateX(135deg) rotateZ(0deg); }
+				100%{transform: rotateY(45deg) rotateX(135deg) rotateZ(360deg);}
+	
+			}
+			
+			.lifangti div{
+				/*width: 200px;
+				height: 200px;*/
+				background-position: center;
+				background-size: cover;
+				opacity: 1;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				border: 0;		
+				border: 4px solid gold;
+				
+				
+			}
+			.biglifangti div{
+				/*width: 200px;
+				height: 200px;*/
+				background-position: center;
+				background-size: cover;
+				opacity: .4;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				border: 0;
+				border: 8px solid #021B43;	
+				box-sizing: border-box;	
+				transition: border-color 1.5s;
+				
+				
+			}
+			
+			.one{
+				background: url(baiyang.jpg);
+				transform: translateZ(100PX);
+				width: 200px;
+				height: 200px;
+			}
+			.two{
+				background: url(sheshou.jpg);
+				transform: translateZ(-100PX) ;
+				width: 200px;
+				height: 200px;
+			}
+			.there{
+				background: url(shizi.jpg);
+				transform: translateX(-100PX) rotateY(90DEG) rotateX(180deg) ;
+				width: 200px;
+				height: 200px;
+				
+			}
+			.four{
+				background: url(tianxie.jpg);
+				transform: translateX(100PX) rotateY(90DEG);
+				width: 200px;
+				height: 200px;
+			}
+			.five{
+				background: url(shuangzi.jpg);
+				transform: translateY(100PX) rotateX(-90DEG);
+				width: 200px;
+				height: 200px;
+			}
+			.six{
+				background: url(chunv.jpg);
+				transform: translateY(-100PX) rotateX(270DEG);
+				width: 200px;
+				height: 200px;
+			}
+			
+				
+			
+			 .a{
+				background: url(shuangyu.jpg);
+				transform: translateZ(200PX);
+				width: 400px;
+				height: 400px;
+			}
+			.b{
+				background: url(jinniu.jpg);
+				transform: translateZ(-200PX) ;
+				width: 400px;
+				height: 400px;
+			}
+			.c{
+				background: url(tianping.jpg);
+				transform: translateX(-200PX) rotateY(90DEG) rotateX(180deg) ;
+				width: 400px;
+				height: 400px;
+			}
+			.d{
+				background: url(juxie.jpg);
+				transform: translateX(200PX) rotateY(90DEG);
+				width: 400px;
+				height: 400px;
+			}
+			.e{
+				background: url(mojie.jpg);
+				transform: translateY(200PX) rotateX(-90DEG);
+				width: 400px;
+				height: 400px;
+			}
+			.f{
+				background: url(shuipin.jpg);
+				transform: translateY(-200PX) rotateX(270DEG);
+				width: 400px;
+				height: 400px;
+			}
+			.biglifangti:hover>div{
+				border: 8px solid gold;
+				}
+			
+
+			
+		</style>
+	</body>
+</html>

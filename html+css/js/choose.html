@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+		<label>
+			<input type="radio" class="radio" />
+		    <div>视觉设计师</div>
+		</label>
+		<label>
+			<input type="radio" class="radio" />
+		    <div>html</div>
+		</label>
+		</ul>
+	</body>
+	<style type="text/css">
+		label{
+			display: inline-block;
+			background: red;
+			}
+		input{
+			display: none;
+			}
+			div:before{
+				content: '';
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: url(../img/img/input-unchecked.png); 
+				vertical-align: middle;
+			}
+			div{
+				display: block;
+				width: 120px;
+			    height: 50px;
+			    text-align: center;
+			    
+			   
+				
+			}
+			input:checked+div:before{
+				background: url(../img/img/input-checked.png);
+			}
+			input:checked+div{
+				background: darkseagreen;
+			}
+	</style>
+</html>

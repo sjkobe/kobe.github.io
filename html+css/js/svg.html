@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<svg x="0px" y="0px"  fill="red">
+			<rect x='10' y='0' width='8' height='30' fill=pink>
+				<animateTransform attributeName='transform' type='translate' values='0 0; 0 20; 0 0' begin='0.2s' dur='.6s' repeatCount='indefinite'></animateTransform>
+			</rect>
+			<rect x='40' y='0' width='8' height='30' fill=pink>
+				<animateTransform attributeName='transform' type='translate' values='0 0; 0 20; 0 0' begin='0.4s' dur='.6s' repeatCount='indefinite'></animateTransform>
+			</rect>
+			<rect x='70' y='0' width='8' height='30' fill=pink>
+				<animateTransform attributeName='transform' type='translate' values='0 0; 0 20; 0 0' begin='0' dur='.6s' repeatCount='indefinite'></animateTransform>
+			</rect>
+		</svg>
+		
+		<!-- <div>
+			<i></i></div>
+			<div><i></i></div>
+			<div><i></i></div> -->
+		
+	</body>
+	<style type="text/css">
+		
+		div{
+			display: inline-block;
+		}
+		i{
+			display: inline-block;
+			width: 8px;
+			height: 30px;
+			background: cornflowerblue;
+			margin: 0 10px;
+			position: relative;
+			
+			
+        }
+        div:first-of-type i{
+        	animation-delay: .6s;	
+        	animation: jin;
+        	animation-duration: 0.6s;	
+			animation-iteration-count: infinite;
+			/*animation-timing-function: linear;*/
+			
+		}
+		div:nth-of-type(2) i{
+        	animation-delay: .4s;
+        	animation: jin;
+        	animation-duration: .6s;	
+			animation-iteration-count: infinite;
+			/*animation-timing-function: linear;*/
+        }	
+        div:last-of-type i{
+        	animation-delay: .2s;
+        	animation: jin;
+        	animation-duration: .6s;	
+			animation-iteration-count: infinite;
+			/*animation-timing-function: linear;*/
+        }	
+	
+		@keyframes jin{
+			0%{top:0px}
+			50%{top:30px}
+			100%{top: 0px}
+		}
+		
+	</style>
+
+</html>
