@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    img{
+        position: absolute;
+    }
+    
+    </style>
+    <script>
+        var car=function(x,y,imgSrc,speed){
+            this.x=x;
+            this.y=y;
+            this.imgSrc=imgSrc
+            this.speed=speed
+
+            this.draw=function(){
+                this.mod=document.createElement('img')
+                this.mod.src=this.imgSrc;
+                this.mod.style.top=y+'px';
+                this.mod.style.left=x+'px';
+                document.body.appendChild(this.mod);
+            }
+        }
+        car.prototype.move=function(){
+            this.mod.style.left=parseInt(this.mod.style.left)+this.speed+'px';
+        }
+        var one = new car(0, 0,'/img/car.png',10);
+			one.draw();
+        var two = new car(0, 100,'/img/car.png',15);
+			two.draw();
+
+            setInterval(function(){
+                one.move();
+                two.move()
+            },100)
+    </script>
+</body>
+</html>

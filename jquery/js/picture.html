@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <i class="a">1</i>
+            <i class="b">2</i>
+            <i class="c">3</i>
+            <i class="d">4</i>
+        </div>
+        <div class="control">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+        </div>
+    </div>
+
+    <style>
+        .bigbox {
+            margin: 0 auto;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 1200px;
+            transition: all 1s;
+        }
+
+        .box i {
+            width: 300px;
+            height: 200px;
+            float: left;
+            /* display: inline-block; */
+        }
+
+        .box i.a {
+            background: lightgreen;
+        }
+
+        .box i.b {
+            background: lightgoldenrodyellow;
+        }
+
+        .box i.c {
+            background: lightskyblue;
+        }
+
+        .box i.d {
+            background: lightpink;
+        }
+
+        .bigbox .control .prev {
+            line-height: 30px;
+            display: inline-block;
+            background: orchid;
+            float: left;
+
+        }
+
+        .bigbox .control .next {
+            line-height: 30px;
+            display: inline-block;
+            background: orchid;
+            float: right;
+        }
+
+        .bigbox .control {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            line-height: 30px;
+            margin: auto;
+
+        }
+    </style>
+    <script>
+        var itam = document.querySelectorAll('.bigbox .box i');
+        var box = document.querySelector('.box');
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var canclick=true;
+
+        next.onclick = function () {
+           
+            
+            box.style.marginLeft = '-300px';
+            box.style.transition = 'all 1s';
+
+            setTimeout(function () {
+
+                box.style.marginLeft = '0';
+                box.style.transition = 'all 0s';
+                box.appendChild(box.firstElementChild);
+                    
+            }, 1000)
+            
+        }
+        prev.onclick = function () {
+
+            box.style.marginLeft = '-300px';
+            box.style.transition = 'all 0s';
+            box.insertBefore(box.lastElementChild, box.firstElementChild);
+            setTimeout(function () {
+                box.style.marginLeft = '0px';
+                box.style.transition = 'all 1s';
+            }, 0)
+        }
+    </script>
+</body>
+
+
+</html>

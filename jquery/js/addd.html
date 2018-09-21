@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1=['a','b','b','c','c','d']
+        var arr2=['e','e','f']
+
+        var add=function (){ 
+ for (var i = 0 ; i < arr1.length ; i ++ ){
+   for(var j = 0 ; j < arr2.length ; j ++ ){
+    if (arr1[i] === arr2[j]){
+     arr1.splice(i,1); //利用splice函数删除元素，从第i个位置，截取长度为1的元素
+    }
+   }
+ }
+ //alert(arr1.length)
+ for(var i = 0; i <arr2.length; i++){
+  arr1.push(arr2[i]);
+ }
+ return arr1;
+ 
+}
+console.log(add)
+    </script>
+</body>
+</html>
