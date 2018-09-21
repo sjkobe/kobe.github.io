@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/choujiang.css">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="bigbox">
+
+			<div id="pg"></div>
+			<div id="pointer"></div>
+
+		</div>
+		</div>
+	</body>
+	<script>
+		var pointer = document.getElementById("pointer");
+		var pg = document.getElementById("pg");
+		var canClick = true;
+		pointer.onclick = function() {
+			if(canClick === true) {
+				canClick = false;
+
+				var randomNumber = Math.floor(Math.random() * 100);
+
+				var start;
+
+				if(randomNumber < 1) {
+					start = {
+						code: 1,
+						text: "一等奖"
+					};
+				} else if(randomNumber < 5) {
+					start = {
+						code: 2,
+						text: "二等奖"
+					};
+				} else if(randomNumber < 15) {
+					start = {
+						code: 3,
+						text: "三等奖"
+					};
+				} else if(randomNumber < 21) {
+					start = {
+						code: 4,
+						text: "四等奖"
+					};
+				} else if(randomNumber < 35) {
+					start = {
+						code: 5,
+						text: "五等奖"
+					};
+				} else if(randomNumber < 50) {
+					start = {
+						code: 6,
+						text: "六等奖"
+					};
+				}
+				else {
+					start = {
+						code: 7,
+						text: "再见"
+					};
+				}
+
+				console.log(start);
+				var currentAngle = 30 + (360 / 7) * (start.code-1);
+				pg.style.transition = 'all 3s';
+				pg.style.transform = 'rotate(' + (currentAngle + 360 * 3) + 'deg)';
+
+				setTimeout(function() {
+					pg.style.transform = 'rotate(' + currentAngle + 'deg)';
+					pg.style.transition = 'all 0s';
+					alert(start.text);
+					canClick = true;
+				}, 3000);
+			}
+		}
+	</script>
+
+</html>

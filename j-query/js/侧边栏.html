@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 打开</span>
+    
+</body>
+<style>
+    body{
+        margin: 0;
+    }
+    .sidenav{
+        width: 0%;
+        height: 100%;
+        background: greenyellow;
+        position: fixed;
+        overflow-x: hidden;
+        text-align: center;
+        transition: .7s;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+    }
+    .sidenav a{
+        display: block;
+        text-decoration: none;
+        font-size: 30px;
+        transition: .3s;
+        color: aliceblue;
+        padding: 8px 8px 8px 32px;
+    }
+    .sidenav a:hover{
+        /* color: green; */
+        -webkit-text-stroke: 1px green;
+    }
+    .sidenav .closebtn{
+        position: absolute;
+        top:5px;
+        left: 5px;
+    }
+</style>
+<script>
+    var box=document.getElementById('mySidenav')
+    function openNav(){
+        box.style.width='100%'
+        // box.style.height='100%'
+    }
+    function closeNav(){
+        box.style.width='0%'
+        // box.style.height='0%'
+    }
+</script>
+</html>
