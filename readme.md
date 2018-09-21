@@ -34,6 +34,6 @@ https://sjkobe.github.io/kobe.github.io/html+css/lushi/改index.html
 
 j-query  
 种地  
-https://sjkobe.github.io/kobe.github.io/j-query/js/作业4种地.html  
+https://sjkobe.github.io/kobe.github.io/jquery/js/作业4种地.html  
 放大镜  
-https://sjkobe.github.io/kobe.github.io/j-query/js/作业3放大镜.html  
+https://sjkobe.github.io/kobe.github.io/jquery/js/作业3放大镜.html  
