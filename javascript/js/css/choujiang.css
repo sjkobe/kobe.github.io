@@ -1,0 +1,28 @@
+.bigbox{
+    background: url(../img/turntable-bg.jpg) center;
+    width: 650px;
+    height: 600px;
+    background-size: cover;
+    position: relative
+
+    
+}
+#pg{
+    background: url(../img/turntable.png);
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 61px;
+    left: 117px;
+    /* z-index: -1; */
+    transition: 5s;
+   
+}
+#pointer{
+    background: url(../img/pointer.png);
+    width: 174px;
+    height: 228px;
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}

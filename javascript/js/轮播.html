@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <i class="a">1</i>
+            <i class="b">2</i>
+            <i class="c">3</i>
+            <i class="d">4</i>
+            <span></span>
+        </div>
+        <div class="control">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+        </div>
+        <ul class="point">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <style>
+        .bigbox {
+            margin: 0 auto;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 1200px;
+            /* transition: all 1s; */
+            margin-left: 0px;
+        }
+
+        .box i {
+            width: 300px;
+            height: 200px;
+            float: left;
+            position: relative;
+            left: 0;
+            /* display: inline-block; */
+        }
+
+        .box i.a {
+            background: lightgreen;
+        }
+
+        .box i.b {
+            background: lightgoldenrodyellow;
+        }
+
+        .box i.c {
+            background: lightskyblue;
+        }
+
+        .box i.d {
+            background: lightpink;
+        }
+
+        .bigbox .control .prev {
+            line-height: 30px;
+            display: inline-block;
+            background: orchid;
+            float: left;
+
+        }
+
+        .bigbox .control .next {
+            line-height: 30px;
+            display: inline-block;
+            background: orchid;
+            float: right;
+        }
+
+        .bigbox .control {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            line-height: 30px;
+            margin: auto;
+
+
+        }
+
+        .point {
+            position: absolute;
+            bottom: 15px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            right: 0px;
+
+        }
+
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: orange;
+            display: inline-block;
+        }
+        .active{
+           border: 2px solid white;
+           border-radius: 50%;
+           box-sizing: border-box;
+        }
+    </style>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        var box = document.querySelector('.box');
+        // $('.next').click(function () { 
+        //     $('.box').css({'marginLeft': '-=300px','transition':'all 1s'})
+        //     setTimeout(function () {  
+        //         // box.appendChild(box.firstElementChild);
+        //         $($('i').first()).insertAfter($('i').last())
+        //         $('.box').css({'marginLeft': '0px','transition':'all 0s'}); 
+        //     }, 1000) 
+        // }) 
+        // $('.prev').click(function () {
+        //     $('.box').css({'marginLeft': '-=300px','transition':'all 0s'});
+        //       $($('i').last()).insertBefore($('i').first())
+        //     // $('.box').css('transition', '0s');
+        //     // box.insertBefore(box.lastElementChild, box.firstElementChild);
+        //     setTimeout(function () {
+        //         margin:"+=100px"
+
+        //     }, 0)
+        // })
+        var old = $('i')
+        $('li').click(function () {
+            var index = 0;
+            var index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active')
+            if ($(this).index() > old.index($('i:eq(0)'))) {
+
+
+                old.eq(index).insertAfter($('i').eq(0))
+                $('.box').animate({
+                    'marginLeft': '-=300px'
+                }, 1000, function () {
+                    $('.box').css('marginLeft', '0px')
+                    $($('i').first()).insertAfter($('i').last())
+                })
+            } else if ($(this).index() < old.index($('i:eq(0)'))) {
+
+                old.eq(index).insertBefore($('i').eq(0))
+                $('.box').css('marginLeft', '-300px').animate({
+                    'marginLeft': '+=300px'
+                }, 1000)
+            }
+        })
+        $('.next').click(function(){
+            
+            var nextI=old.index($('i:eq(0)'))+1
+            if(nextI>=old.length){
+                nextI=0;
+                }
+                $('li').eq(nextI).addClass('active').siblings().removeClass('active')
+                old.eq(nextI).insertAfter($('i').eq(0))
+                $('.box').animate({
+                    'marginLeft': '-=300px'
+                }, 1000, function () {
+                    $('.box').css('marginLeft', '0px')
+                    $($('i').first()).insertAfter($('i').last())
+                })
+            
+        })
+        $('.prev').click(function(){
+            
+            var prevI=old.index($('i:eq(0)'))-1
+            if(prevI<0){
+                prevI=old.length-1;
+                }
+                $('li').eq(prevI).addClass('active').siblings().removeClass('active')
+                old.eq(prevI).insertBefore($('i').eq(0))
+                $('.box').css('marginLeft', '-300px').animate({
+                    'marginLeft': '+=300px'
+                }, 1000)
+            
+        })
+    </script>
+</body>
+
+</html>

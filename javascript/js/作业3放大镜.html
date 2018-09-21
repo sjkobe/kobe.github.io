@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="bigbox">
+            <div class="box">
+                <i class="a">1</i>
+                <i class="b">2</i>
+                <i class="c">3</i>
+                <i class="d">4</i>
+                <span></span>
+            </div>
+            <!-- <div class="control">
+           
+        </div> -->
+            <ul class="point">
+                <!-- <div class="prev">《</div> -->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <!-- <div class="next">》</div> -->
+            </ul>
+        </div>
+        <div class="big">
+
+
+            <img src="/img/aixi1.jpg" alt="">
+            <img src="/img/ashe1.jpg" alt="">
+            <img src="/img/sizhao.jpg" alt="">
+            <img src="/img/zhengfu.jpg" alt="">
+
+        </div>
+    </div>
+
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+        }
+
+        .center {
+            width: 850px;
+            margin: 0 auto;
+
+        }
+
+        .bigbox {
+            /* margin: 0 auto; */
+            width: 400px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 10%;
+            border: 5px solid white;
+        }
+
+        .box {
+            width: 1600px;
+            /* transition: all 1s; */
+            margin-left: 0px;
+
+        }
+
+        .box i {
+            width: 400px;
+            height: 400px;
+            float: left;
+            position: relative;
+            left: 0;
+
+            /* display: inline-block; */
+        }
+
+        .box i.a {
+            background: url(/img/aixi1.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        .box i.b {
+            background: url(/img/ashe1.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        .box i.c {
+            background: url(/img/sizhao.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        .box i.d {
+            background: url(/img/zhengfu.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        .box span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: white;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            border-radius: 10%;
+        }
+
+        .prev {
+            line-height: 30px;
+            display: inline-block;
+            position: relative;
+            float: left;
+            color: white;
+            z-index: 10;
+            top: 5px;
+            left: 40px;
+        }
+
+        .next {
+            line-height: 30px;
+            display: inline-block;
+            position: relative;
+            float: right;
+            color: white;
+            z-index: 10;
+            top: 5px;
+            left: -40px;
+        }
+
+        /* .bigbox .control {
+            position: absolute;
+            top: 190px;
+            left: 0;
+
+            right: 0;
+            line-height: 30px;
+            margin: auto;
+
+
+        } */
+
+        .point {
+            position: absolute;
+            bottom: 40px;
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            right: 0px;
+            z-index: 10;
+            background: rgba(255, 255, 255, .2);
+            padding-top: 4px;
+            border: 1px solid rgba(255, 255, 255, .3);
+
+
+
+        }
+
+        li {
+            width: 60px;
+            height: 40px;
+            border-radius: 5px;
+            background: wheat;
+            display: inline-block;
+            /* border: 1px solid white; */
+            transform: scale(1)
+        }
+
+        li:nth-of-type(1) {
+            background: url(/img/aixi1.jpg)no-repeat;
+            background-size: cover;
+
+        }
+
+        li:nth-of-type(2) {
+            background: url(/img/ashe1.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        li:nth-of-type(3) {
+            background: url(/img/sizhao.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        li:nth-of-type(4) {
+            background: url(/img/zhengfu.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        .active {
+            border: 1px solid white;
+
+        }
+
+        .big {
+            width: 400px;
+            height: 400px;
+            /* display: block; */
+
+            position: relative;
+            border-radius: 10%;
+            overflow: hidden;
+            border: 5px solid white;
+            /* margin: 0 auto; */
+            display: none;
+
+
+        }
+
+        .big img {
+            width: 1600px;
+            height: 1600px;
+
+            position: absolute;
+            top: 0px;
+            left: -0px;
+            z-index: -1;
+
+        }
+
+        .big img:first-child {
+            z-index: 3
+        }
+    </style>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        var box = document.querySelector('.box');
+
+        var old = $('i')
+        $('li').click(function () {
+            var index = 0;
+            var index = $(this).index();
+            $('img').eq($(this).index()).show().siblings().hide()
+            $(this).addClass('active').siblings().removeClass('active')
+            if ($(this).index() > old.index($('i:eq(0)'))) {
+
+
+                old.eq(index).insertAfter($('i').eq(0))
+                $('.box').animate({
+                    'marginLeft': '-=400px'
+                }, 300, function () {
+                    $('.box').css('marginLeft', '0px')
+                    $($('i').first()).insertAfter($('i').last())
+                })
+            } else if ($(this).index() < old.index($('i:eq(0)'))) {
+
+                old.eq(index).insertBefore($('i').eq(0))
+                $('.box').css('marginLeft', '-400px').animate({
+                    'marginLeft': '+=400px'
+                }, 300)
+            }
+        })
+        $('.next').click(function () {
+
+            var nextI = old.index($('i:eq(0)')) + 1
+            if (nextI >= old.length) {
+                nextI = 0;
+            }
+            $('img').eq(nextI).show().siblings().hide()
+            $('li').eq(nextI).addClass('active').siblings().removeClass('active')
+            old.eq(nextI).insertAfter($('i').eq(0))
+            $('.box').animate({
+                'marginLeft': '-=400px'
+            }, 300, function () {
+                $('.box').css('marginLeft', '0px')
+                $($('i').first()).insertAfter($('i').last())
+            })
+
+        })
+        $('.prev').click(function () {
+
+            var prevI = old.index($('i:eq(0)')) - 1
+            if (prevI < 0) {
+                prevI = old.length - 1;
+            }
+            $('img').eq(prevI).show().siblings().hide()
+            $('li').eq(prevI).addClass('active').siblings().removeClass('active')
+            old.eq(prevI).insertBefore($('i').eq(0))
+            $('.box').css('marginLeft', '-400px').animate({
+                'marginLeft': '+=400px'
+            }, 300)
+
+        })
+        // var img = $('.small').css('background-image')
+        $('.box').mousemove(function (ev) {
+            $('span').css({
+                top: (ev.clientY - $('.bigbox').offset().top - 50),
+                left: (ev.clientX - $('.bigbox').offset().left - 50)
+
+            })
+            $('.big').css({
+                'display': 'inline-block'
+            })
+            $('span').css({
+                'opacity': '.5'
+
+            })
+
+            $('img').css({
+                top: (ev.clientY - $('.bigbox').offset().top - 50) * -4,
+                left: (ev.clientX - $('.bigbox').offset().left - 50) * -4
+            })
+            if (parseInt($('span').css('top')) > 300) {
+                $('span').css('top', '300px')
+                $('img').css('top', '-1200px')
+            }
+            if (parseInt($('span').css('top')) < 0) {
+                $('span').css('top', '0px')
+                $('img').css('top', '0px')
+            }
+            if (parseInt($('span').css('left')) < 0) {
+                $('span').css('left', '0px')
+                $('img').css('left', '0px')
+            }
+            if (parseInt($('span').css('left')) > 300) {
+                $('span').css('left', '300px')
+                $('img').css('left', '-1200px')
+            }
+
+        })
+        $('li').mouseenter(function () {
+            $('span').hide()
+            // border: 1px solid white;
+            $('li').eq($(this).index()).css({
+                'transform': 'scale(1.2)'
+            }).siblings().css({
+                'transform': 'scale(1)',
+
+            })
+        })
+        $('li').mouseout(function () {
+            $('span').show()
+            $('li').siblings().css({
+                'transform': 'scale(1)'
+
+            })
+        })
+        $('.bigbox').mouseout(function () {
+            $('.big').css({
+                'display': 'none'
+
+            })
+            $('span').css({
+                'opacity': '0'
+
+            })
+        })
+        // $('.bigbox').mouseenter(function () {
+        //     $('.big').css({
+        //         'display': 'inline-block'
+
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

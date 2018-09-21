@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <button class="btn1">淡出</button>
+    <button class="btn2">淡入</button>
+    <button class="btn3">透明</button>
+    <button class="btn4">fadetoggle</button>
+    <button class="btn5">上滑</button>
+    <button class="btn6">下滑</button>
+    <button class="btn7">使用动画放大高度</button>
+    <button class="btn8">重置高度</button>
+    <hr>
+
+    <style>
+        bodyP {
+            -webkit-perspective: 500px;
+        }
+
+        div {
+            width: 300px;
+            height: 200px;
+            background: palegoldenrod;
+            
+        }
+    </style>
+    <script>
+        $(".btn1").click(function () {
+            $("div").fadeOut()
+        });
+        $(".btn2").click(function () {
+            $("div").fadeIn();
+        });
+        $('.btn3').click(function () {
+            $("div").fadeTo(1000, 0.5)
+        });
+        $('.btn4').click(function () {
+            $("div").fadeToggle(3000)
+        });
+        $('.btn5').click(function () {
+            $("div").slideUp()
+        });
+        $('.btn6').click(function () {
+            $("div").slideDown()
+        });
+        $('.btn7').click(function () {
+            $("div").animate({margin:"+=5px"})
+        })
+     
+    </script>
+</body>
+
+</html>
