@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">
+    <input type="checkbox">
+    <div>
+        <a href="">
+            <i></i>
+            <i></i>
+            <i></i>
+        </a>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+    </label>
+</body>
+<style>
+    div{
+        width: 300px;
+        height: 300px;
+        background: yellow;
+    }
+    a{
+        display: block
+    }
+    a i{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: black
+    }
+   
+/* input:checked+div{
+    background: green;
+} */
+input:checked+div a:nth-of-type(1) i:nth-of-type(1),
+    i:nth-of-type(2),i:nth-of-type(3){
+    background: white;
+}
+</style>
+</html>
