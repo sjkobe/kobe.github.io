@@ -39,8 +39,8 @@ plane.prototype.draw = function () {
 var planeS = {
     width: 34,
     height: 24,
-    imgSrc: '/img/enemy-plane-s.png',
-    boomSrc: '/img/enemy-plane-s-boom.gif',
+    imgSrc: 'img/enemy-plane-s.png',
+    boomSrc: 'img/enemy-plane-s-boom.gif',
     boomTime: 100,
     hp: 1
 }
@@ -48,23 +48,23 @@ var planeS = {
 var planeM = {
     width: 46,
     height: 60,
-    imgSrc: '/img/enemy-plane-m.png',
-    boomSrc: '/img/enemy-plane-m-boom.gif',
+    imgSrc: 'img/enemy-plane-m.png',
+    boomSrc: 'img/enemy-plane-m-boom.gif',
     boomTime: 100,
     hp: 5
 }
 var planeL = {  
     width: 110,
     height: 164,
-    imgSrc: '/img/enemy-plane-l.png',
-    boomSrc: '/img/enemy-plane-l-boom.gif',
+    imgSrc: 'img/enemy-plane-l.png',
+    boomSrc: 'img/enemy-plane-l-boom.gif',
     boomTime: 100,
     hp: 15
 }
 var ourplane={
     width: 66,
     height: 80,
-    imgSrc: '/img/our-plane.gif',
+    imgSrc: 'img/our-plane.gif',
     boomSrc: '/img/our-plane-boom.gif',
     boomTime: 100,
     hp: 1
@@ -73,7 +73,7 @@ var ourplane={
 var bulletX={
     width:6,
     height:14,
-    imgSrc:'/img/our-bullet.png',
+    imgSrc:'img/our-bullet.png',
     
 }
 
