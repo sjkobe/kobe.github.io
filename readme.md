@@ -1,6 +1,6 @@
-html+css  [幽灵按钮]  
+html+css  幽灵按钮  
 
-{https://sjkobe.github.io/kobe.github.io/html+css/js/cccccc.html } 
+<a href="https://sjkobe.github.io/kobe.github.io/html+css/js/cccccc.html"></a>  
 
 https://sjkobe.github.io/kobe.github.io/html+css/js/hahah.html  
 
