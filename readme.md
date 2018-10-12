@@ -39,7 +39,7 @@ j-query
 https://sjkobe.github.io/kobe.github.io/jquery/js/作业4种地.html  
 
 放大镜  
-https://sjkobe.github.io/kobe.github.io/jquery/js/作业3放大镜.html  
+https://sjkobe.github.io/kobe.github.io/jquery/js/放大镜.html  
 
 js-美图  
 
