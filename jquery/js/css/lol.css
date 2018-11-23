@@ -110,7 +110,7 @@ header .banner dd {
 }
 
 .inlinerighticon dd a {
-  background: url(/img/4.jpg) no-repeat 0 0;
+  background: url(./img/4.jpg) no-repeat 0 0;
   text-indent: -9999px;
   overflow: hidden;
   text-align: left;
@@ -234,13 +234,13 @@ h1 {
 }
 
 .swiper .pic .a {
-  background: url(/img/kda-lyrics-bg.jpg) no-repeat;
+  background: url(./img/kda-lyrics-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .swiper .pic .b {
-  background: url(/img/kda-interview-bg.jpg)no-repeat;
+  background: url(./img/kda-interview-bg.jpg)no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -275,21 +275,21 @@ h1 {
 }
 
 .swiper .pic .c {
-  background: url(/img/veigar-color-bg-temp.jpg) no-repeat;
+  background: url(./img/veigar-color-bg-temp.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 
 }
 
 .swiper .pic .d {
-  background: url(/img/art-is-life-bg.jpg) no-repeat;
+  background: url(./img/art-is-life-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 
 }
 
 .swiper .pic .e {
-  background: url(/img/nocturne-color-bg.jpg) no-repeat;
+  background: url(./img/nocturne-color-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -300,7 +300,7 @@ h1 {
   height: 1000px;
   margin: 0 auto;
   /* opacity: .2; */
-  background: url(/img/latestBg.jpg);
+  background: url(./img/latestBg.jpg);
   /* background-color: rgba(0,0,0,0.5) */
   background-size: 100%;
 
@@ -313,7 +313,7 @@ h1 {
 
 .no2 {
   top: -100PX;
-  background: url(/img/trendingBackground.jpg) no-repeat;
+  background: url(./trendingBackground.jpg) no-repeat;
   background-position-y: 0%;
   margin-bottom: 50px;
 }
@@ -431,7 +431,7 @@ h1 {
 
 
 .box:nth-of-type(1) {
-  background: url(/img/image.jpg) no-repeat;
+  background: url(./img/image.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -439,31 +439,31 @@ h1 {
 }
 
 .box:nth-of-type(2) {
-  background: url(/img/kaisa-splash.jpg);
+  background: url(./img/kaisa-splash.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .box:nth-of-type(3) {
-  background: url(/img/evelynn-rework-splash.jpg);
+  background: url(./img/evelynn-rework-splash.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .box:nth-of-type(4) {
-  background: url(/img/Classic_Akali_Splash.jpg);
+  background: url(./img/Classic_Akali_Splash.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .box:nth-of-type(5) {
-  background: url(/img/one.png);
+  background: url(./img/one.png);
   background-size: cover;
   background-position: center;
 }
 
 .bigbox {
-  background: url(/img/kda-music-video-placeholder.jpg);
+  background: url(./img/kda-music-video-placeholder.jpg);
   background-size: cover;
   background-position: center;
   border: 1px solid #32281f;
@@ -642,31 +642,31 @@ h6 {
 }
 
 .photo2 .box:nth-of-type(1) {
-  background: url(/img/nocturne-color-bg.jpg);
+  background: url(./img/nocturne-color-bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .photo2 .box:nth-of-type(2) {
-  background: url(/img/kda-lyrics-bg.jpg);
+  background: url(./img/kda-lyrics-bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .photo2 .box:nth-of-type(3) {
-  background: url(/img/ezreal-handbook-1.jpg);
+  background: url(./img/ezreal-handbook-1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .photo2 .box:nth-of-type(4) {
-  background: url(/img/ryze-cover.jpg);
+  background: url(./img/ryze-cover.jpg);
   background-size: cover;
   background-position: 80%;
 }
 
 .photo2 .bigbox {
-  background: url(/img/frozen-hearts-bg-image.jpg);
+  background: url(./frozen-hearts-bg-image.jpg);
   background-size: cover;
   background-position: 30%;
   border: 1px solid #32281f;
@@ -824,25 +824,25 @@ h6 {
 }
 
 .y .akali a {
-  background: url(/img/Classic_Akali_Splash.jpg)no-repeat;
+  background: url(./img/Classic_Akali_Splash.jpg)no-repeat;
   background-size: cover;
 
 }
 
 .y .kaisa a {
-  background: url(/img/kaisa-splash.jpg)no-repeat;
+  background: url(./img/kaisa-splash.jpg)no-repeat;
   background-size: cover;
 
 }
 
 .y .evelynn a {
-  background: url(/img/evelynn-rework-splash.jpg)no-repeat;
+  background: url(./img/evelynn-rework-splash.jpg)no-repeat;
   background-size: cover;
 
 }
 
 .y .Ahri a {
-  background: url(/img/Ahri_0.jpg)no-repeat;
+  background: url(./img/Ahri_0.jpg)no-repeat;
   background-size: cover;
 
 }
