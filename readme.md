@@ -80,4 +80,5 @@ https://sjkobe.github.io/kobe.github.io/jquery/js/小球.html
 https://sjkobe.github.io/kobe.github.io/jquery/js/渐入渐出.html  
 
 
- 
+ 英雄联盟
+ https://sjkobe.github.io/kobe.github.io/jquery/js/lol.html 
